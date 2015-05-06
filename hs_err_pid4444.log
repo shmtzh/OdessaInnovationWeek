@@ -1,0 +1,56 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 460256 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:325), pid=4444, tid=4476
+#
+# JRE version: 7.0_01-b08
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.1-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000006152800):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=4476, stack(0x0000000006d10000,0x0000000006e10000)]
+
+Stack: [0x0000000006d10000,0x0000000006e10000]
+
+Current CompileTask:
+C2:   3341  138             com.android.dx.ssa.SsaConverter::placePhiFunctions (394 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000000616a800 JavaThread "Service Thread" daemon [_thread_blocked, id=6368, stack(0x0000000006f10000,0x0000000007010000)]
+  0x0000000006167800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=7584, stack(0x0000000006e10000,0x0000000006f10000)]
+=>0x0000000006152800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=4476, stack(0x0000000006d10000,0x0000000006e10000)]
+  0x0000000006151800 JavaThread "Attach Listener" daemon [_thread_blocked, id=6448, stack(0x0000000006c10000,0x0000000006d10000)]
+  0x000000000614e000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4508, stack(0x0000000006b10000,0x0000000006c10000)]
+  0x00000000060ea000 JavaThread "Finalizer" daemon [_thread_blocked, id=3700, stack(0x0000000006a10000,0x0000000006b10000)]
+  0x00000000060e6800 JavaThread "Reference Handler" daemon [_thread_blocked, id=6684, stack(0x0000000006910000,0x0000000006a10000)]
+  0x000000000292d000 JavaThread "main" [_thread_in_Java, id=11292, stack(0x00000000025a0000,0x00000000026a0000)]
+
+Other Threads:
+  0x00000000060df000 VMThread [stack: 0x0000000006810000,0x0000000006910000] [id=9908]
+  0x0000000006177800 WatcherThread [stack: 0x0000000007010000,0x0000000007110000] [id=2408]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 18560K, used 4512K

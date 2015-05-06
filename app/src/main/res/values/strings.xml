@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Odessa Innovation Week</string>
+    <string name="tech_events">Tech events</string>
+    <string name="bs_events">Business events</string>
+    <string name="startup_events">StartUp events</string>
+    <string name="map">Map</string>
+    <string name="about">About</string>
+
+    <string name="backend">Will consist of three parallel streams: Architecture and HighLoad, DevOps and Cloud Frameworks and DB.</string>
+    <string name="frontend">Automation of frontend templating languages, and one-page application, and preprocessors client standardisation,
+        mobile sites and applications Web-based generators statics, local caching and offline stores, JavaScript frameworks Were, React,
+        and more will be waiting for you on this day.</string>
+
+    <string name="design">will focus on the technology development of application interfaces and Web sites would be considered modern design
+        trends and new developments in advertising.</string>
+
+    <string name="pm">Talk on current issues like the use of different practices and tools for the effective management of the teams and projects,
+        and specific examples of the formation, management and development teams and projects.</string>
+
+    <string name="hardware"><![CDATA[
+        In 2015, we will add new topics and formats. We invite you to the Conference the draft GeeksLab in Odessa Innovation Week. The first
+         technical conference for Hardware developers, which will focus on Robotics and Internet of things.
+    The Conference will highlight the technical issues such as: software development for iron, create cards and prints, building solutions based
+     on the Arduino board, Intel ready to Galileo, Raspberry Pi and others, as well as much more.—>
+The event will bring together about 100 highly qualified developers from all over Ukraine and CIS countries. Among the guest speakers leading
+specialists of companies such as: Intel, Petcube, iblazr, EcoisMe, LEGO, Kwambio and others.]]></string>
+
+    <string name="robotics">Participants will get acquainted with the basic principles of creating hardware projects, learn all stages of product
+        development and will establish its first prototype. Teachers will be made by experts of leading Ukrainian and foreign companies that
+        create hardware projects in the direction of Robots and IoT.</string>
+
+    <string name="product">The Conference will be interesting for both sales/business development managers and marketing professionals, owners
+        of Internet projects and technical professionals who develop or want to run your project.
+Basic theoretical information and practical examples on the sales organization in the modern business environment: basic principles of
+        organization of the sales process, psychological types of customers and sales professionals, strategic planning and preparation,
+        development of business in the future.
+Registration is already open, and the program will be gradually updated.</string>
+
+    <string name="outsource">The Conference will be interesting for both sales/business development managers and marketing professionals,
+        owners of Internet projects and technical professionals who develop or want to run your project.
+Basic theoretical information and practical examples on the sales organization in the modern business environment: basic principles of
+        organization of the sales process, psychological types of customers and sales professionals, strategic planning and preparation,
+        development of business in the future.
+Registration is already open, and the program will be gradually updated.</string>
+
+
+    <string name="bizdev">Business direction will continue a series of master classes and courses for those who want to try yourself in the role
+        of Business Development, Sales, Pre-Sales Manager in an IT company.
+How and where to look for new customers? How to work with potential customers in a different culture, mentality, traditions, a good sales manager
+        does not simply must have developed emotional intelligence, but also to be able to adapt and learn the peculiarities of living and
+        communicating in the countries with which it works.
+Lectures and training sessions from practitioners, from the basics.
+More info very soon.</string>
+
+   <string name="sul">
+       During the Conference will be a space that will become a discussion forum concerning the IT-business topics and issues.
+       We\'ll talk about marketing trends in the promotion of development, startups, the distribution of shares in startup, the role of the team
+       in the project, let\'s take a look at case studies of successful companies, as well as go through dips startups, and of course a great
+       panel discussion we topic-where to look for a potential investor, when and how much to attract investment. </string>
+
+    <string name="su"><![CDATA[For those who are not sure of the strength of their startups will StartUp Crash Test event to examine the strength
+     of business models, distribution models, marketing strategies and other necessary elements of IT-startups. For many projects, this is the
+     first public statement, a first opportunity to talk about your project and get reviews and recommendations from other members. The SCT
+      supported projects such as: zakaz.ua, sumno.ua, youscan.ru, lun.ua, drivernotes.net, attendify.com and others.—>
+5 +15 format provides for 5 minutes for presentation and 15 minutes for questions from the audience.]]></string>
+
+    <string name="front_end_title">WebCamp: Front-end</string>
+    <string name="back_end_title">WebCamp: Back-end</string>
+    <string name="design_title">WebCamp: Design</string>
+    <string name="pm_title">WebCamp: Project Management</string>
+    <string name="hardware_title">Hardware Lab</string>
+    <string name="robotics_title">Robotics School</string>
+    <string name="outsource_title">SalesLab: Outsource</string>
+    <string name="product_title">SalesLab: Product</string>
+    <string name="bizdev_title">BizDevCamp</string>
+    <string name="sul_title">StartUpLab</string>
+    <string name="su_title">StartUp Crash Test</string>
+    <string name="show_location">Location</string>
+    <string name="mapshow">Go to location</string>
+
+
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="show_map">S</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_content">Odessa Innovation Week
+Sea, sun, innovations
+\n \n
+Innovation Technology Week 2013 in Odessa gathers first-class IT-specialists from all over Ukraine and abroad to discuss relevant topics in the field of web technologies, development, web design and project management, as well as in the field of IT-business and entrepreneurship.
+\n  \n
+Odessa today is one of the IT-capital of Ukraine, and the main purpose of Odessa Innovation Week to promote the development of industry and market players to combine on one platform for effective interaction and exchange of experiences.
+\n \n
+In 2015, we will add topics Odessa Innovation Week events dedicated to the development of IT product in Ukraine, interaction IT, state and educational institutions.
+In Odessa, you are waiting for the conference as meaningful in all directions IT, and located for networking atmosphere, hot topics, hot discus and afterparty.</string>
+    <string name="title_activity_description">DescriptionActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>

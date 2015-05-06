@@ -1,0 +1,77 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:219), pid=4332, tid=10904
+#
+# JRE version: 7.0_01-b08
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.1-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000005be2000):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=10904, stack(0x00000000067c0000,0x00000000068c0000)]
+
+Stack: [0x00000000067c0000,0x00000000068c0000]
+
+Current CompileTask:
+C2:   3314  140             com.android.dx.ssa.SsaMethod::mapRegisters (87 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000005bfa800 JavaThread "Service Thread" daemon [_thread_blocked, id=7296, stack(0x00000000069c0000,0x0000000006ac0000)]
+  0x0000000005bf7800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=8280, stack(0x00000000068c0000,0x00000000069c0000)]
+=>0x0000000005be2000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=10904, stack(0x00000000067c0000,0x00000000068c0000)]
+  0x0000000005be1000 JavaThread "Attach Listener" daemon [_thread_blocked, id=9880, stack(0x00000000066c0000,0x00000000067c0000)]
+  0x0000000005bde000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=8072, stack(0x00000000065c0000,0x00000000066c0000)]
+  0x0000000005b7a000 JavaThread "Finalizer" daemon [_thread_blocked, id=8592, stack(0x00000000064a0000,0x00000000065a0000)]
+  0x0000000005b76800 JavaThread "Reference Handler" daemon [_thread_blocked, id=7692, stack(0x00000000063a0000,0x00000000064a0000)]
+  0x000000000071d000 JavaThread "main" [_thread_in_Java, id=8640, stack(0x00000000020a0000,0x00000000021a0000)]
+
+Other Threads:
+  0x0000000005b6f000 VMThread [stack: 0x00000000062a0000,0x00000000063a0000] [id=10452]
+  0x0000000005c07800 WatcherThread [stack: 0x0000000006ac0000,0x0000000006bc0000] [id=1192]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 18560K, used 4511K [0x00000000eaab0000, 0x00000000ecef0000, 0x0000000100000000)
+  eden space 15936K, 11% used [0x00000000eaab0000,0x00000000eac8a2f8,0x00000000eba40000)
+  from space 2624K, 99% used [0x00000000eba40000,0x00000000ebccdc78,0x00000000ebcd0000)
+  to   space 2624K, 0% used [0x00000000ecc60000,0x00000000ecc60000,0x00000000ecef0000)
+ PSOldGen        total 42432K, used 1511K [0x00000000c0000000, 0x00000000c2970000, 0x00000000eaab0000)
+  object space 42432K, 3% used [0x00000000c0000000,0x00000000c0179e78,0x00000000c2970000)
+ PSPermGen       total 21248K, used 5353K [0x00000000bae00000, 0x00000000bc2c0000, 0x00000000c0000000)
+  object space 21248K, 25% used [0x00000000bae00000,0x00000000bb33a700,0x00000000bc2c0000)
+
+Code Cache  [0x00000000022d0000, 0x0000000002540000, 0x00000000052d0000)
+ total_blobs=368 nmethods=138 adapters=181 free_code_cache=48565Kb largest_free_block=49706112
+
+Dynamic libraries:
+0x00007ff7a26b0000 - 0x00007ff7a26e3000 	C:\PROGRA~1\Java\JDK17~1.0_0\bin\java.exe
+0x00007ffe8b940000 - 0x00007ffe8baec000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe8b740000 - 0x00007ffe8b87e000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x00007ffe88ea0000 - 0x00007ffe88fb5000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x00007ffe87630000 - 0x00007ffe876be000 	C:\WINDOWS\system32\apphelp.dll
+0x00007ffe73ee0000 - 0x00007ffe73f33000 	C:\WINDOWS\AppPatch\AppPatch64\AcGenral.DLL
+0x00007ffe89670000 - 0x00007ffe8971a000 	C:\WINDOWS\system32\msvcrt.dll
+0x00007ffe888c0000 - 0x00007ffe888ee000 	C:\WINDOWS\SYSTEM32\SspiCli.dll
+0x00007ffe899b0000 - 0x00007ffe89a04000 	C:\WINDOWS\system32\SHLWAPI.dll

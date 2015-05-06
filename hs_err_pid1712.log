@@ -1,0 +1,133 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1040656 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:325), pid=1712, tid=12152
+#
+# JRE version: 7.0_01-b08
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.1-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000006392800):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=12152, stack(0x0000000006f70000,0x0000000007070000)]
+
+Stack: [0x0000000006f70000,0x0000000007070000]
+
+Current CompileTask:
+C2:   1250  124   !         com.android.dx.cf.code.BytecodeArray::parseInstruction (2764 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00000000063bf800 JavaThread "Service Thread" daemon [_thread_blocked, id=7852, stack(0x0000000007170000,0x0000000007270000)]
+  0x00000000063ab000 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=2060, stack(0x0000000007070000,0x0000000007170000)]
+=>0x0000000006392800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=12152, stack(0x0000000006f70000,0x0000000007070000)]
+  0x0000000006391000 JavaThread "Attach Listener" daemon [_thread_blocked, id=5300, stack(0x0000000006e70000,0x0000000006f70000)]
+  0x000000000638e000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=11936, stack(0x0000000006d70000,0x0000000006e70000)]
+  0x000000000632f800 JavaThread "Finalizer" daemon [_thread_blocked, id=6640, stack(0x0000000006c50000,0x0000000006d50000)]
+  0x0000000006326800 JavaThread "Reference Handler" daemon [_thread_blocked, id=8248, stack(0x0000000006b50000,0x0000000006c50000)]
+  0x0000000000f0d000 JavaThread "main" [_thread_in_native, id=8324, stack(0x00000000028b0000,0x00000000029b0000)]
+
+Other Threads:
+  0x000000000631f000 VMThread [stack: 0x0000000006a50000,0x0000000006b50000] [id=9664]
+  0x00000000063d0800 WatcherThread [stack: 0x0000000007270000,0x0000000007370000] [id=9256]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 18560K, used 5123K [0x00000000eaab0000, 0x00000000ebf60000, 0x0000000100000000)
+  eden space 15936K, 15% used [0x00000000eaab0000,0x00000000ead28ce8,0x00000000eba40000)
+  from space 2624K, 98% used [0x00000000eba40000,0x00000000ebcc8018,0x00000000ebcd0000)
+  to   space 2624K, 0% used [0x00000000ebcd0000,0x00000000ebcd0000,0x00000000ebf60000)
+ PSOldGen        total 42432K, used 4329K [0x00000000c0000000, 0x00000000c2970000, 0x00000000eaab0000)
+  object space 42432K, 10% used [0x00000000c0000000,0x00000000c043a720,0x00000000c2970000)
+ PSPermGen       total 21248K, used 4866K [0x00000000bae00000, 0x00000000bc2c0000, 0x00000000c0000000)
+  object space 21248K, 22% used [0x00000000bae00000,0x00000000bb2c0b08,0x00000000bc2c0000)
+
+Code Cache  [0x0000000002ab0000, 0x0000000002d20000, 0x0000000005ab0000)
+ total_blobs=357 nmethods=129 adapters=179 free_code_cache=48520Kb largest_free_block=49673024
+
+Dynamic libraries:
+0x00007ff7a26b0000 - 0x00007ff7a26e3000 	C:\PROGRA~1\Java\JDK17~1.0_0\bin\java.exe
+0x00007ffe8b940000 - 0x00007ffe8baec000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe8b740000 - 0x00007ffe8b87e000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x00007ffe88ea0000 - 0x00007ffe88fb5000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x00007ffe87630000 - 0x00007ffe876be000 	C:\WINDOWS\system32\apphelp.dll
+0x00007ffe73ee0000 - 0x00007ffe73f33000 	C:\WINDOWS\AppPatch\AppPatch64\AcGenral.DLL
+0x00007ffe89670000 - 0x00007ffe8971a000 	C:\WINDOWS\system32\msvcrt.dll
+0x00007ffe888c0000 - 0x00007ffe888ee000 	C:\WINDOWS\SYSTEM32\SspiCli.dll
+0x00007ffe899b0000 - 0x00007ffe89a04000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x00007ffe8b5c0000 - 0x00007ffe8b737000 	C:\WINDOWS\system32\USER32.dll
+0x00007ffe89270000 - 0x00007ffe89404000 	C:\WINDOWS\system32\ole32.dll
+0x00007ffe89c40000 - 0x00007ffe8b158000 	C:\WINDOWS\system32\SHELL32.dll
+0x00007ffe88030000 - 0x00007ffe88051000 	C:\WINDOWS\SYSTEM32\USERENV.dll
+0x00007ffe8b330000 - 0x00007ffe8b3da000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x00007ffe7ebc0000 - 0x00007ffe7ebde000 	C:\WINDOWS\SYSTEM32\MPR.dll
+0x00007ffe89120000 - 0x00007ffe89261000 	C:\WINDOWS\system32\RPCRT4.dll
+0x00007ffe89410000 - 0x00007ffe89469000 	C:\WINDOWS\SYSTEM32\sechost.dll
+0x00007ffe89730000 - 0x00007ffe89941000 	C:\WINDOWS\SYSTEM32\combase.dll
+0x00007ffe89a10000 - 0x00007ffe89b61000 	C:\WINDOWS\system32\GDI32.dll
+0x00007ffe88a90000 - 0x00007ffe88aa5000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ffe86c80000 - 0x00007ffe86d32000 	C:\WINDOWS\SYSTEM32\SHCORE.dll
+0x00007ffe8b4c0000 - 0x00007ffe8b4f6000 	C:\WINDOWS\system32\IMM32.DLL
+0x00007ffe88fc0000 - 0x00007ffe89111000 	C:\WINDOWS\system32\MSCTF.dll
+0x00007ffe84f70000 - 0x00007ffe851eb000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.17415_none_6240486fecbd8abb\COMCTL32.dll
+0x00000000724d0000 - 0x00000000725a1000 	C:\PROGRA~1\Java\JDK17~1.0_0\jre\bin\msvcr100.dll
+0x0000000071e00000 - 0x00000000724cd000 	C:\PROGRA~1\Java\JDK17~1.0_0\jre\bin\server\jvm.dll
+0x00007ffe80570000 - 0x00007ffe80579000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe80540000 - 0x00007ffe80562000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe89720000 - 0x00007ffe89727000 	C:\WINDOWS\system32\PSAPI.DLL
+0x00007ffe89950000 - 0x00007ffe899aa000 	C:\WINDOWS\system32\WS2_32.dll
+0x00007ffe804c0000 - 0x00007ffe804ea000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffe8b310000 - 0x00007ffe8b319000 	C:\WINDOWS\system32\NSI.dll
+0x00007ffe88bc0000 - 0x00007ffe88c0f000 	C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+0x00007ffe87890000 - 0x00007ffe878b8000 	C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+0x0000000072780000 - 0x000000007278f000 	C:\PROGRA~1\Java\JDK17~1.0_0\jre\bin\verify.dll
+0x0000000072750000 - 0x0000000072778000 	C:\PROGRA~1\Java\JDK17~1.0_0\jre\bin\java.dll
+0x0000000072730000 - 0x0000000072745000 	C:\PROGRA~1\Java\JDK17~1.0_0\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Xmx1024M -Xss1m -Djava.ext.dirs=C:\Users\Sony\AppData\Local\Android\sdk\build-tools\21.1.2\lib 
+java_command: C:\Users\Sony\AppData\Local\Android\sdk\build-tools\21.1.2\lib\dx.jar --dex --no-optimize --output C:\Users\Sony\AndroidStudioProjects\OIW\app\build\intermediates\dex\debug --input-list C:\Users\Sony\AndroidStudioProjects\OIW\app\build\intermediates\tmp\dex\debug\inputList.txt
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.7.0_01
+PATH=C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\ProgramData\Oracle\Java\javapath; C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Sony\VAIO Improvement\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;C:\Users\Sony\Documents\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\sdk\tools; C:\Users\Sony\Documents\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\sdk\platform-tools;M2_HOME\bin, C:\Program Files\Java\jdk1.8.0_20\bin;C:\Program Files\Apache Software Foundation\apache-maven-3.2.5\bin, C:\Program Files\Java\jdk1.8.0_20\bin
+USERNAME=Sony
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.2 Build 9200 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 4070680k(261932k free), swap 7216408k(5136k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.1-b02) for windows-amd64 JRE (1.7.0_01-b08), built on Oct  3 2011 01:39:25 by "java_re" with unknown MS VC++:1600
+
+time: Wed Apr 15 13:50:32 2015
+elapsed time: 1 seconds
+

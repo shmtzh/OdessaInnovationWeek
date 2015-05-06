@@ -1,0 +1,210 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32756 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:273), pid=10292, tid=4572
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_25-b18) (build 1.8.0_25-b18)
+# Java VM: Java HotSpot(TM) Client VM (25.25-b02 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x44c84400):  JavaThread "C1 CompilerThread0" daemon [_thread_in_native, id=4572, stack(0x452e0000,0x45330000)]
+
+Stack: [0x452e0000,0x45330000],  sp=0x4532f290,  free space=316k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x19796b]
+V  [jvm.dll+0x190928]
+V  [jvm.dll+0x818b9]
+V  [jvm.dll+0x81b2f]
+V  [jvm.dll+0x81e8a]
+V  [jvm.dll+0x274f28]
+V  [jvm.dll+0x276533]
+V  [jvm.dll+0x279965]
+V  [jvm.dll+0x27e18d]
+V  [jvm.dll+0x27eb96]
+V  [jvm.dll+0x282b2d]
+V  [jvm.dll+0x282c7b]
+V  [jvm.dll+0x2708e2]
+V  [jvm.dll+0x270acb]
+V  [jvm.dll+0x270c1a]
+V  [jvm.dll+0x270d88]
+V  [jvm.dll+0x271002]
+V  [jvm.dll+0x669ca]
+V  [jvm.dll+0x67089]
+V  [jvm.dll+0x1698cc]
+V  [jvm.dll+0x16a15a]
+V  [jvm.dll+0x1aee06]
+C  [msvcr100.dll+0x5c556]
+C  [msvcr100.dll+0x5c600]
+C  [KERNEL32.DLL+0x17c04]
+C  [ntdll.dll+0x5b54f]
+C  [ntdll.dll+0x5b51a]
+C  0x00000000
+
+
+Current CompileTask:
+C1:    163    3             java.io.DataInputStream::readUTF (501 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x44c8d800 JavaThread "Service Thread" daemon [_thread_blocked, id=6024, stack(0x45370000,0x45470000)]
+=>0x44c84400 JavaThread "C1 CompilerThread0" daemon [_thread_in_native, id=4572, stack(0x452e0000,0x45330000)]
+  0x44c8fc00 JavaThread "Attach Listener" daemon [_thread_blocked, id=10204, stack(0x451a0000,0x452a0000)]
+  0x44c8f000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4316, stack(0x45060000,0x45160000)]
+  0x44c64c00 JavaThread "Finalizer" daemon [_thread_blocked, id=9932, stack(0x44f60000,0x45060000)]
+  0x00fdd800 JavaThread "Reference Handler" daemon [_thread_blocked, id=10304, stack(0x44e60000,0x44f60000)]
+  0x00edc800 JavaThread "main" [_thread_in_vm, id=2996, stack(0x00d20000,0x00e20000)]
+
+Other Threads:
+  0x00fdac00 VMThread [stack: 0x00c60000,0x00cb0000] [id=8196]
+  0x44caa000 WatcherThread [stack: 0x454b0000,0x45500000] [id=3092]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 4928K, used 619K [0x04800000, 0x04d50000, 0x19d50000)
+  eden space 4416K,  14% used [0x04800000, 0x0489ae38, 0x04c50000)
+  from space 512K,   0% used [0x04c50000, 0x04c50000, 0x04cd0000)
+  to   space 512K,   0% used [0x04cd0000, 0x04cd0000, 0x04d50000)
+ tenured generation   total 10944K, used 0K [0x19d50000, 0x1a800000, 0x44800000)
+   the space 10944K,   0% used [0x19d50000, 0x19d50000, 0x19d50200, 0x1a800000)
+ Metaspace       used 1477K, capacity 2240K, committed 2240K, reserved 4480K
+
+Card table byte_map: [0x00fe0000,0x011f0000] byte_map_base: 0x00fbc000
+
+Polling page: 0x006b0000
+
+CodeCache: size=32768Kb used=652Kb max_used=652Kb free=32115Kb
+ bounds [0x02620000, 0x026c8000, 0x04620000]
+ total_blobs=139 nmethods=3 adapters=69
+ compilation: enabled
+
+Compilation events (5 events):
+Event: 0.112 Thread 0x44c84400    1             java.lang.String::hashCode (55 bytes)
+Event: 0.112 Thread 0x44c84400 nmethod 1 0x026c2688 code [0x026c2780, 0x026c2850]
+Event: 0.114 Thread 0x44c84400    2             sun.nio.cs.SingleByte$Decoder::decode (11 bytes)
+Event: 0.115 Thread 0x44c84400 nmethod 2 0x026c2bc8 code [0x026c2cc0, 0x026c2d60]
+Event: 0.130 Thread 0x44c84400    3             java.io.DataInputStream::readUTF (501 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (2 events):
+Event: 0.056 Thread 0x00edc800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x0480fba0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u25\1677\hotspot\src\share\v¨êy)¹¬?
+Event: 0.056 Thread 0x00edc800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x0480fe20) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u25\1677\hotspot\src\share\vm\prims\jni.cpp, l
+
+Events (10 events):
+Event: 0.127 loading class sun/util/calendar/ZoneInfo
+Event: 0.127 loading class sun/util/calendar/ZoneInfo done
+Event: 0.127 loading class sun/util/calendar/ZoneInfoFile
+Event: 0.128 loading class sun/util/calendar/ZoneInfoFile done
+Event: 0.128 loading class sun/util/calendar/ZoneInfoFile$1
+Event: 0.128 loading class sun/util/calendar/ZoneInfoFile$1 done
+Event: 0.128 loading class java/io/DataInputStream
+Event: 0.128 loading class java/io/DataInput
+Event: 0.128 loading class java/io/DataInput done
+Event: 0.128 loading class java/io/DataInputStream done
+
+
+Dynamic libraries:
+0x011f0000 - 0x01220000 	C:\PROGRA~2\Java\JRE18~1.0_2\bin\java.exe
+0x771b0000 - 0x7731e000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x767b0000 - 0x768f0000 	C:\WINDOWS\SYSTEM32\KERNEL32.DLL
+0x76060000 - 0x76137000 	C:\WINDOWS\SYSTEM32\KERNELBASE.dll
+0x71a90000 - 0x71b30000 	C:\WINDOWS\system32\apphelp.dll
+0x61d90000 - 0x61ff5000 	C:\WINDOWS\AppPatch\AcGenral.DLL
+0x75e10000 - 0x75ed3000 	C:\WINDOWS\SYSTEM32\msvcrt.dll
+0x76010000 - 0x76051000 	C:\WINDOWS\SYSTEM32\sechost.dll
+0x749b0000 - 0x749ce000 	C:\WINDOWS\SYSTEM32\SspiCli.dll
+0x762d0000 - 0x76315000 	C:\WINDOWS\SYSTEM32\SHLWAPI.dll
+0x70660000 - 0x7074d000 	C:\WINDOWS\SYSTEM32\UxTheme.dll
+0x76320000 - 0x76473000 	C:\WINDOWS\SYSTEM32\USER32.dll
+0x76d70000 - 0x76e7e000 	C:\WINDOWS\SYSTEM32\GDI32.dll
+0x705c0000 - 0x705e3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x71a70000 - 0x71a83000 	C:\WINDOWS\SYSTEM32\samcli.dll
+0x75c80000 - 0x75da8000 	C:\WINDOWS\SYSTEM32\ole32.dll
+0x76600000 - 0x76695000 	C:\WINDOWS\SYSTEM32\OLEAUT32.dll
+0x6f5c0000 - 0x6f5d7000 	C:\WINDOWS\SYSTEM32\MSACM32.dll
+0x74640000 - 0x74648000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x749d0000 - 0x75c7c000 	C:\WINDOWS\SYSTEM32\SHELL32.dll
+0x73fa0000 - 0x73fbb000 	C:\WINDOWS\SYSTEM32\USERENV.dll
+0x71070000 - 0x7108a000 	C:\WINDOWS\SYSTEM32\dwmapi.dll
+0x70c10000 - 0x70d5b000 	C:\WINDOWS\SYSTEM32\urlmon.dll
+0x76700000 - 0x7677c000 	C:\WINDOWS\SYSTEM32\ADVAPI32.dll
+0x6fcd0000 - 0x6fd35000 	C:\WINDOWS\SYSTEM32\WINSPOOL.DRV
+0x717c0000 - 0x717d6000 	C:\WINDOWS\SYSTEM32\MPR.dll
+0x768f0000 - 0x769aa000 	C:\WINDOWS\SYSTEM32\RPCRT4.dll
+0x749a0000 - 0x749aa000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.dll
+0x76480000 - 0x765fd000 	C:\WINDOWS\SYSTEM32\combase.dll
+0x703b0000 - 0x703d3000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x73f80000 - 0x73f8f000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x73fc0000 - 0x741f2000 	C:\WINDOWS\SYSTEM32\iertutil.dll
+0x74340000 - 0x74515000 	C:\WINDOWS\SYSTEM32\WININET.dll
+0x74940000 - 0x74994000 	C:\WINDOWS\SYSTEM32\bcryptPrimitives.dll
+0x76d10000 - 0x76d4c000 	C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+0x71090000 - 0x710b1000 	C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+0x72ea0000 - 0x72f2b000 	C:\WINDOWS\SYSTEM32\SHCORE.DLL
+0x76780000 - 0x767a7000 	C:\WINDOWS\system32\IMM32.DLL
+0x76fc0000 - 0x770d2000 	C:\WINDOWS\SYSTEM32\MSCTF.dll
+0x70750000 - 0x70956000 	C:\WINDOWS\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.17415_none_a9ed7f470139b3c1\COMCTL32.dll
+0x6f680000 - 0x6f73f000 	C:\PROGRA~2\Java\JRE18~1.0_2\bin\msvcr100.dll
+0x619e0000 - 0x61d84000 	C:\PROGRA~2\Java\JRE18~1.0_2\bin\client\jvm.dll
+0x74650000 - 0x74658000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x76b70000 - 0x76b76000 	C:\WINDOWS\SYSTEM32\PSAPI.DLL
+0x766b0000 - 0x76700000 	C:\WINDOWS\SYSTEM32\WS2_32.dll
+0x76000000 - 0x76007000 	C:\WINDOWS\SYSTEM32\NSI.dll
+0x6fd60000 - 0x6fd6c000 	C:\PROGRA~2\Java\JRE18~1.0_2\bin\verify.dll
+0x6bbc0000 - 0x6bbe1000 	C:\PROGRA~2\Java\JRE18~1.0_2\bin\java.dll
+0x6ebc0000 - 0x6ebd3000 	C:\PROGRA~2\Java\JRE18~1.0_2\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Xmx1024M -Xss1m -Djava.ext.dirs=C:\Users\Sony\AppData\Local\Android\sdk\build-tools\21.1.2\lib 
+java_command: C:\Users\Sony\AppData\Local\Android\sdk\build-tools\21.1.2\lib\dx.jar --dex --output C:\Users\Sony\AndroidStudioProjects\OIW\app\build\intermediates\pre-dexed\debug\classes-f038a34b12598bcfe30cd3fec1f66782db98c0d5.jar C:\Users\Sony\AndroidStudioProjects\OIW\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.0.0\classes.jar
+java_class_path (initial): C:\Users\Sony\AppData\Local\Android\sdk\build-tools\21.1.2\lib\dx.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.7.0_01
+PATH=C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\ProgramData\Oracle\Java\javapath; C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Sony\VAIO Improvement\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;C:\Users\Sony\Documents\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\sdk\tools; C:\Users\Sony\Documents\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\sdk\platform-tools;%M2_HOME%\bin, C:\Program Files\Java\jdk1.8.0_20\bin;C:\Program Files\Apache Software Foundation\apache-maven-3.2.5\bin, C:\Program Files\Java\jdk1.8.0_20\bin
+USERNAME=Sony
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 4070680k(179936k free), swap 7216408k(3584k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.25-b02) for windows-x86 JRE (1.8.0_25-b18), built on Oct  7 2014 14:31:05 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Wed Apr 15 14:00:05 2015
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
